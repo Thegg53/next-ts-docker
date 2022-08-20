@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  next:
+    build: .
+    volumes:
+      - .:/app:rw
+      - /workspace/node_modules
+    command: yarn dev
+    ports:
+      - 3000:3000
+
